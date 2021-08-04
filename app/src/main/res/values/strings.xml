@@ -3,4 +3,7 @@
     <string name="delete">delete</string>
     <string name="edit">edit</string>
     <string name="next">Next</string>
+    <string name="cpf">CPF</string>
+    <string name="senha">Senha</string>
+    <string name="entrar">Entrar</string>
 </resources>

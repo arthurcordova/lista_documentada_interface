@@ -19,7 +19,6 @@ class CicloDeVidaActivity : AppCompatActivity() {
             val intentSegundaTela = Intent(this, SegundaActivity::class.java)
             startActivity(intentSegundaTela)
         }
-
     }
 
     override fun onStart() {

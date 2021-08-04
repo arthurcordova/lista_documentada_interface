@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
 import com.proway.listainterfaceevents.adapter.ProdutosAdapter
+import com.proway.listainterfaceevents.extensions.showMessage
 import com.proway.listainterfaceevents.interfaces.ClickableProduto
 import com.proway.listainterfaceevents.model.Produto
 import java.util.*
@@ -66,14 +67,10 @@ class MainActivity : AppCompatActivity(), ClickableProduto {
      * Será chamado de dentro do nosso adapter
      */
     override fun onClickEdit(produto: Produto) {
-        Snackbar.make(recyclerView, "EDIT: ${produto.nome}", Snackbar.LENGTH_LONG).show()
-    }
+        showMessage(recyclerView, produto.nome.concatNameWithCompany())
 
-    override fun onResume() {
 
-        produtosAdapter.refresh(Singleton.variavel)
-
-        super.onResume()
     }
 
 }
+

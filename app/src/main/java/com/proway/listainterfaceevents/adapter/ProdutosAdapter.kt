@@ -16,7 +16,7 @@ import com.proway.listainterfaceevents.model.Produto
  *
  */
 class ProdutosAdapter(
-    val parametroListaDeProdutos: MutableList<Produto>,
+    var parametroListaDeProdutos: MutableList<Produto>,
     val parametroIterface: ClickableProduto
 ) :
     RecyclerView.Adapter<ItemProdutoViewHolder>() {
@@ -66,8 +66,7 @@ class ProdutosAdapter(
 
 
     fun refresh(listaAtualizada: MutableList<Produto>) {
-        parametroListaDeProdutos.clear()
-        parametroListaDeProdutos.addAll(listaAtualizada)
+        parametroListaDeProdutos = listaAtualizada
         notifyDataSetChanged()
     }
 
