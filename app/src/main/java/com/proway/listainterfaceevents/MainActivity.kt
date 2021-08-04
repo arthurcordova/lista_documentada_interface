@@ -69,4 +69,11 @@ class MainActivity : AppCompatActivity(), ClickableProduto {
         Snackbar.make(recyclerView, "EDIT: ${produto.nome}", Snackbar.LENGTH_LONG).show()
     }
 
+    override fun onResume() {
+
+        produtosAdapter.refresh(Singleton.variavel)
+
+        super.onResume()
+    }
+
 }

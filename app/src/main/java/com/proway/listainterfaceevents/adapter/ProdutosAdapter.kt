@@ -64,6 +64,13 @@ class ProdutosAdapter(
         return parametroListaDeProdutos.size
     }
 
+
+    fun refresh(listaAtualizada: MutableList<Produto>) {
+        parametroListaDeProdutos.clear()
+        parametroListaDeProdutos.addAll(listaAtualizada)
+        notifyDataSetChanged()
+    }
+
 }
 
 /**
